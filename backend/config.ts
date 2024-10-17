@@ -8,7 +8,7 @@ const rootPath = __dirname;
 const config = {
   rootPath,
   publicPath: path.join(rootPath, "public"),
-  database: "mongodb://localhost/cocktailRecipe",
+  database: "mongodb://localhost/cocktail",
   google: {
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
