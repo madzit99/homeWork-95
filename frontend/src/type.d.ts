@@ -40,3 +40,33 @@ export interface RegisterResponse {
   message: string;
   user: User;
 }
+
+export interface Ingredient {
+  nameIngredients: string;
+  amountIngredients: string;
+}
+
+export interface IngredientMutation {
+  nameIngredients: string;
+  amountIngredients: string;
+}
+
+export interface Cocktail {
+  _id: string;
+  user: {
+    _id: string;
+    displayName: string;
+  };
+  name: string;
+  image: string;
+  recipe: string;
+  isPublished: boolean;
+  ingredients: Ingredient[];
+}
+
+export interface CocktailMutation {
+  name: string;
+  image: File | null;
+  recipe: string;
+  ingredients: IngredientMutation[];
+}

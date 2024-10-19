@@ -80,6 +80,7 @@ usersRouter.post(
       const email = payload!.email;
       const id = payload!.sub;
       const displayName = payload!.name;
+      const avatar = payload!.picture;
 
       if (!email) {
         res.status(400).send({
@@ -97,6 +98,7 @@ usersRouter.post(
           confirmPassword: newPassword,
           googleId: id,
           displayName,
+          avatar: avatar
         });
       }
 

@@ -7,11 +7,13 @@ const permit = (...roles: string[]) => {
     const req = expressReq as RequestWithUser;
 
     if (!req.user) {
-      return res.status(401).send({ message: "Unauthenticated" });
+      res.status(401).send({ message: "Unauthenticated" });
+      return;
     }
 
     if (!roles.includes(req.user.role)) {
-      return res.status(403).send({ message: "Unauthorized" });
+      res.status(403).send({ message: "Unauthorized" });
+      return;
     }
 
     next();

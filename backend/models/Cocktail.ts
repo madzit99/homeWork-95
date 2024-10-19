@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const CoctailSchema = new mongoose.Schema({
+const CocktailSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
@@ -30,7 +30,7 @@ const CoctailSchema = new mongoose.Schema({
   }
 });
 
-const Coctail = mongoose.model("Coctail", CoctailSchema);
+const Cocktail = mongoose.model("Cocktail", CocktailSchema);
 
-export default Coctail;
+export default Cocktail;
 
